@@ -1,38 +1,39 @@
-import x11_hash
+import x11_gost_hash
 from binascii import unhexlify, hexlify
 
 import unittest
 
-# dash block #1
-# moo@b1:~/.dash$ dashd getblockhash 1
-# 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
-# moo@b1:~/.dash$ dashd getblock 000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343
-# {
-#     "hash" : "000007d91d1254d60e2dd1ae580383070a4ddffa4c64c2eeb4a2f9ecc0414343",
-#     "confirmations" : 169888,
-#     "size" : 186,
-#     "height" : 1,
-#     "version" : 2,
-#     "merkleroot" : "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7",
-#     "tx" : [
-#         "ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7"
-#     ],
-#     "time" : 1390103681,
-#     "nonce" : 128987,
-#     "bits" : "1e0ffff0",
-#     "difficulty" : 0.00024414,
-#     "previousblockhash" : "00000ffd590b1485b3caadc19b22e6379c733355108f107a430458cdf3407ab6",
-#     "nextblockhash" : "00000bafcc571ece7c5c436f887547ef41b574e10ef7cc6937873a74ef1efeae"
-# }
+# Sibcoin block #1
+# ivan@b1:~/.sibcoin$ sibcoin-cli getblockhash 1
+# 0000085b23aeab914465a41fc753d61e0e39ca05d5870e77f6287763928cd9b0
+# ivan@b1:~/.sibcoin$ sibcoin-cli getblock 0000085b23aeab914465a41fc753d61e0e39ca05d5870e77f6287763928cd9b0
+#{
+#    "hash" : "0000085b23aeab914465a41fc753d61e0e39ca05d5870e77f6287763928cd9b0",
+#    "confirmations" : 351337,
+#    "size" : 186,
+#    "height" : 1,
+#    "version" : 3,
+#    "merkleroot" : "8db686f7eabfe0ba61e2e0601f3bd557a5926da4f68fa96fe1dafa5b98980c91",
+#    "tx" : [
+#        "8db686f7eabfe0ba61e2e0601f3bd557a5926da4f68fa96fe1dafa5b98980c91"
+#    ],
+#    "time" : 1431130209,
+#    "nonce" : 569046,
+#    "bits" : "1e0ffff0",
+#    "difficulty" : 0.00024414,
+#    "chainwork" : "0000000000000000000000000000000000000000000000000000000000200020",
+#    "previousblockhash" : "00000c492bf73490420868bc577680bfc4c60116e7e85343bc624787c21efa4c",
+#    "nextblockhash" : "00000722c462136d5a41d80f3a7f36f24777e4276b7e141933649fc47dddd071"
+#}
 
-header_hex = ("02000000" +
-    "b67a40f3cd5804437a108f105533739c37e6229bc1adcab385140b59fd0f0000" +
-    "a71c1aade44bf8425bec0deb611c20b16da3442818ef20489ca1e2512be43eef"
-    "814cdb52" +
+header_hex = ("03000000" +
+    "4cfa1ec2874762bc4353e8e71601c6c4bf807657bc6808429034f72b490c0000" +
+    "910c98985bfadae16fa98ff6a46d92a557d53b1f60e0e261bae0bfeaf786b68d"
+    "61504d55" +
     "f0ff0f1e" +
-    "dbf70100")
+    "d6ae0800")
 
-best_hash = '434341c0ecf9a2b4eec2644cfadf4d0a07830358aed12d0ed654121dd9070000'
+best_hash = 'b0d98c92637728f6770e87d505ca390e1ed653c71fa4654491abae235b080000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
@@ -40,8 +41,8 @@ class TestSequenceFunctions(unittest.TestCase):
         self.block_header = unhexlify(header_hex)
         self.best_hash = best_hash
 
-    def test_x11_hash(self):
-        self.pow_hash = hexlify(x11_hash.getPoWHash(self.block_header))
+    def test_x11_gost_hash(self):
+        self.pow_hash = hexlify(x11_gost_hash.getPoWHash(self.block_header))
         self.assertEqual(self.pow_hash, self.best_hash)
 
 
