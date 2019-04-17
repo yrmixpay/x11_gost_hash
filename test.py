@@ -27,11 +27,11 @@ import unittest
 #}
 
 header_hex = ("02000000" +
-    "4cfa1ec2874762bc4353e8e71601c6c4bf807657bc6808429034f72b490c0000" +
-    "910c98985bfadae16fa98ff6a46d92a557d53b1f60e0e261bae0bfeaf786b68d"
-    "61504d55" +
-    "f0ff0f1e" +
-    "d6ae0800")
+    "8b1571d81c37123a73e0273bcaaf77eff9401a930e2cb499dcb72fdfaf47dd23" +
+    "8fb363378365ef92c076efd83a074d960369813416b47a06963b2b59c3e5ec4b"
+    "1555423404" +
+    "1e0ffff0" +
+    "7189")
 
 best_hash = '0000024a1ede3e643c6beabfbffef7d0be6f96175d870f524671f46ca9bc8edd'
 
