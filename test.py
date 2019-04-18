@@ -4,26 +4,26 @@ from binascii import unhexlify, hexlify
 import unittest
 
 # yrmixcoin block #1
-# ivan@b1:~/.yrmixcoin$ yrmixcoin-cli getblockhash 1
-# 0000024a1ede3e643c6beabfbffef7d0be6f96175d870f524671f46ca9bc8edd
-# ubuntu@b1:~/.yrmixcoin$ yrmixcoin-cli getblock 0000024a1ede3e643c6beabfbffef7d0be6f96175d870f524671f46ca9bc8edd
+# yrmixcoin@b1:~/.yrmixcoin$ yrmixcoin-cli getblockhash 1
+# 000005b3f9ab5ffcef68cfa3d76bbaf259e6e546a7bf6d7acd349edfed361080
+# yrmixcoin@b1:~/.yrmixcoin$ yrmixcoin-cli getblock 000005b3f9ab5ffcef68cfa3d76bbaf259e6e546a7bf6d7acd349edfed361080
 #{
-#    "hash" : "0000024a1ede3e643c6beabfbffef7d0be6f96175d870f524671f46ca9bc8edd",
+#    "hash" : "000005b3f9ab5ffcef68cfa3d76bbaf259e6e546a7bf6d7acd349edfed361080",
 #    "confirmations" : 1,
-#    "size" : 179,
+#    "size" : 169,
 #    "height" : 1,
 #    "version" : 20000000,
-#    "merkleroot" : "044cbb591e616d75def4e8e62f6c8443624f8aba9e3a62e62e5ff1c5c8c59f71",
+#    "merkleroot" : "0bed774890c67025be6ed8ee5243f4114fff40602d974776ea72411193ef28b7",
 #    "tx" : [
-#        "044cbb591e616d75def4e8e62f6c8443624f8aba9e3a62e62e5ff1c5c8c59f71"
+#        "0bed774890c67025be6ed8ee5243f4114fff40602d974776ea72411193ef28b7"
 #    ],
-#    "time" : 1555423404,
-#    "nonce" : 7189,
+#    "time" : 1555543013, 
+#    "nonce" : 21170,
 #    "bits" : "1e0ffff0",
-#    "difficulty" : 000244140625,
+#    "difficulty" : 0.000244140625,
 #    "chainwork" : "0000000000000000000000000000000000000000000000000000000000200020",
-#    "previousblockhash" : "00000c492bf73490420868bc577680bfc4c60116e7e85343bc624787c21efa4c",
-#    "nextblockhash" : "00000d87443123cc4848baa166279698b0eb529698c4440ff85cf03ca94dff12"
+#    "previousblockhash" : "00000d87443123cc4848baa166279698b0eb529698c4440ff85cf03ca94dff12",
+#    "nextblockhash" : "00000f4c2843ee8c08de6739bd4fe42ddea33b9b775132502865892bbcee1b42"
 #}
 
 header_hex = ("02000000" +
@@ -33,7 +33,7 @@ header_hex = ("02000000" +
     "1e0ffff0" +
     "7189")
 
-best_hash = '0000024a1ede3e643c6beabfbffef7d0be6f96175d870f524671f46ca9bc8edd'
+best_hash = '801036eddf9e34cd7a6dbfa746e5e659f2ba6bd7a3cf68effc5fabf9b3050000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
