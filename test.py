@@ -29,9 +29,9 @@ import unittest
 header_hex = ("02000000" +
     "12ff4da93cf05cf80f44c4989652ebb098962766a1ba4848cc233144870d0000" +
     "b728ef93114172ea7647972d6040ff4f11f44352eed86ebe2570c6904877ed0b"
-    "E5B3B75C" +
+    "e5b3b75c" +
     "f0ff0f1e" +
-    "B2520000")
+    "b2520000")
 
 best_hash = '801036eddf9e34cd7a6dbfa746e5e659f2ba6bd7a3cf68effc5fabf9b3050000'
 
