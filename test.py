@@ -26,7 +26,7 @@ import unittest
 #    "nextblockhash" : "00000f4c2843ee8c08de6739bd4fe42ddea33b9b775132502865892bbcee1b42"
 #}
 
-header_hex = ("02000000" +
+header_hex = ("00000020" +
     "12ff4da93cf05cf80f44c4989652ebb098962766a1ba4848cc233144870d0000" +
     "b728ef93114172ea7647972d6040ff4f11f44352eed86ebe2570c6904877ed0b"
     "e5b3b75c" +
