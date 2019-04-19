@@ -34,7 +34,7 @@ header_hex = ("00000020" +
     "f0ff0f1e" +
     "c0d80000")
 
-best_hash = ' 7aeebd584a37386da5a55f42128e08dee1948ba78ccc69a6ed345497ec65030000'
+best_hash = '7aeebd584a37386da5a55f42128e08dee1948ba78ccc69a6ed345497ec65030000'
 
 class TestSequenceFunctions(unittest.TestCase):
 
