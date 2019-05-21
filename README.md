@@ -1,7 +1,7 @@
 x11_gost_hash (v1.4)
 ===========================
 
-Python module for Yrmixcoin's X11Gost hashing.
+Python module for Sibcoin's X11Gost hashing.
 
 
 Install
@@ -28,4 +28,3 @@ Credits
 * Module maintained by @vertoe https://github.com/vertoe/darkcoin_hash
 * Module maintained by @jakehaas https://github.com/jakehaas/x11_hash
 * Module maintained by @ivansib https://github.com/ivansib/x11_gost_hash
-* Module maintained by @yrmixpay https://github.com/yrmixpay/x11_gost_hash
